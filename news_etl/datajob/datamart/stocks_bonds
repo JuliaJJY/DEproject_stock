@@ -1,0 +1,9 @@
+from pyspark.sql.functions import col, ceil
+from infra.jdbc import DataWarehouse, find_data, save_data
+from pyspark.sql import SparkSession
+
+class CoPopuDensity:
+    
+    @classmethod
+        def save(cls):
+        vaccine = find_data(DataWarehouse, 'CORONA_VACCINE')
